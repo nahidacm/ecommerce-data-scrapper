@@ -2,15 +2,41 @@
 <html>
   <head>
     <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
+      body {
+        width: 700px;
+      }
+      h3 {
+        display: inline-block;
+        border-bottom: 1px solid #000;
+      }
+      .tips {
+        font-size: 10px;
+        color: rgb(0, 128, 122);
+        margin-left: 10px;
+      }
+      .content {
+        border: 1px solid #cccccc;
       }
     </style>
   </head>
   <body>
-    <button id="changeColor"></button>
+    <div id="title">
+      <h3>Title</h3><span class="tips">click on content to copy</span>
+      <p class="content"></p>
+    </div>
+    <div id="short_desc">
+      <h3>Short Description</h3><span class="tips">click on content to copy</span>
+      <p class="content"></p>
+    </div>
+    <div id="tech_spec">
+      <h3>Technical Specification</h3><span class="tips">click on content to copy</span>
+      <p class="content"></p>
+    </div>
+    <div id="images">
+      <h3>Images</h3><span class="tips">Click on images to download</span>
+      <p class="content"></p>
+    </div>
+    
     <script src="popup.js"></script>
   </body>
 </html>
