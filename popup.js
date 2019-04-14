@@ -4,11 +4,17 @@ chrome.tabs.query({
 }, function(tabs) {
   tab_url = tabs[0].url
   var excute_script
-  if(RegExp('https?:\/\/(www.)?(amazon)\..{2,}\/.*').test(tab_url)){
-    excute_script = 'content-scripts/amazon-scrapper.js'
-  }else if(RegExp('https?:\/\/(www.)?(computerdealsdirect)\..{2,}\/.*').test(tab_url)){
-    excute_script = 'content-scripts/computerdealsdirect-scrapper.js'
-  }
+  
+  let scrapables = [
+    'amazon',
+    'computerdealsdirect'
+  ]
+
+  scrapables.forEach(function(site_name){
+    if(RegExp('https?:\/\/(www.)?('+site_name+')\..{2,}\/.*').test(tab_url)){
+      excute_script = 'content-scripts/'+site_name+'-scrapper.js'
+    }
+  })
 
   if(excute_script){
     console.log(excute_script)
