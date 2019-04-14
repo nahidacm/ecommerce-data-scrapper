@@ -9,11 +9,10 @@ chrome.tabs.query({
   }else if(RegExp('https?:\/\/(www.)?(computerdealsdirect)\..{2,}\/.*').test(tab_url)){
     excute_script = 'content-scripts/computerdealsdirect-scrapper.js'
   }
-  
 
   if(excute_script){
     console.log(excute_script)
-    chrome.tabs.executeScript({file: 'content-scripts/amazon-scrapper.js'}, function(result) {
+    chrome.tabs.executeScript({file: excute_script}, function(result) {
       const product_data = result[0]
       
       //Title
