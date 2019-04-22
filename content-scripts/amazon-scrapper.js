@@ -25,6 +25,7 @@
     tech_spec_detail.forEach(function(row){
         tech_spec += '<tr><th>'+row.cells[0].textContent+'</th><td>'+row.cells[1].textContent+'</td></tr>'
     })
+    tech_spec += '</table>'
     product_data.tech_spec = tech_spec
 
     //Images
