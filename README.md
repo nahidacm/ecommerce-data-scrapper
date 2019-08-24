@@ -1,3 +1,6 @@
+# Download
+git clone git@github.com:nahidacm/ecommerce-data-scrapper.git
+
 # ecommerce-data-scrapper
 Chrome extension that scrap product data from Amazon, newegg, computerdealsdirect etc 
 
