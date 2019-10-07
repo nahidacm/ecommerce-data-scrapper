@@ -15,7 +15,7 @@
     //Images
     let images = document.querySelectorAll('.productView-imageCarousel-main-item img')
     let sourceArray = Array.from(images).map(function(image){
-      return image.src
+      return image.src.split('?')[0]
     })
     product_data.images = sourceArray
 
